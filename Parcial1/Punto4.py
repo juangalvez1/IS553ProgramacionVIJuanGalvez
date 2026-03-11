@@ -1,6 +1,6 @@
 def main():
     print("Punto 4 del parcial I\n")
-    num = (int(input("Ingrese un numero de 4 cifras: ")))
+    num = int(input("Ingrese un numero de 4 cifras: "))
 
     firstDigit = num // 1000
     secondDigit = (num % 1000) // 100

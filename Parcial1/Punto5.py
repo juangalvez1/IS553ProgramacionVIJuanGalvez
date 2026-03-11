@@ -20,8 +20,6 @@ class Cesar:
                 encryptedText += self.alphabetDisplaced[self.alphabet.index(text[i])]
             else:
                 encryptedText += ' '
-
-        # print(f"\nTexto = {text}\nEncriptado = {encryptedText}")
         return encryptedText
     
     def deEncode(self, encryptedText):
@@ -31,8 +29,6 @@ class Cesar:
                 text += self.alphabet[self.alphabetDisplaced.index(encryptedText[i])]
             else:
                 text += ' '
-
-        # print(f"\nEncriptado = {encryptedText}\nTexto = {text}")
         return text
     
 def main():
@@ -40,8 +36,6 @@ def main():
     
     encription = Cesar(0)
     while 1:
-        # print(encription)
-
         print("\n--- MENÚ ---")
         print("1. Ingresar desplazamiento")
         print("2. Encriptar una frase")

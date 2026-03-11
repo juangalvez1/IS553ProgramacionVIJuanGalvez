@@ -11,9 +11,9 @@ class Empleado:
         return f"ID: {self.ID}, Nombre: {self.nombre}, Salario: {self.salario}, Años de experiencia: {self.años_experiencia}"  
 
     def calcular_salario(self):
-        if self.años_experiencia >= 0 and self.años_experiencia <=2:
+        if 0 <= self.años_experiencia <= 2:
             return self.salario * 1.05
-        elif self.años_experiencia >= 3 and self.años_experiencia <=5:
+        elif 3 <= self.años_experiencia <= 5:
             return self.salario * 1.10
         elif self.años_experiencia > 5:
             return self.salario * 1.15

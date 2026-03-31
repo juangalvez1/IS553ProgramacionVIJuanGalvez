@@ -79,6 +79,7 @@ def main():
         print("1. Agregar empleado")
         print("2. Eliminar empleado")
         print("3. Buscar empleado por ID")
+        print("7. Editar empleado")
         print("4. Mostrar empleados")
         print("5. Guardar empleados")
         print("6. Salir\n")
@@ -121,6 +122,8 @@ def main():
             gestor.guardar_empleados()
             print("Saliendo del sistema...")
             break
+        elif opcion == 7:
+            gestor.editar_empleado(123, "pepito")
         else:
             print("Opción inválida. Intente de Nuevo.\n")
     

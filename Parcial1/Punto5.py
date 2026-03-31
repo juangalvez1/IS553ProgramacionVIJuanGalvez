@@ -19,7 +19,7 @@ class Cesar:
             if text[i] != ' ':
                 encryptedText += self.alphabetDisplaced[self.alphabet.index(text[i])]
             else:
-                encryptedText += ' '
+                encryptedText += 'ñ'
         return encryptedText
     
     def deEncode(self, encryptedText):

@@ -137,13 +137,13 @@ class Tienda:
 def main():
     store = Tienda()
 
-    product1 = Producto(1, "Papa", 1.3, 50)
+    product1 = Producto(1, "Papa", 1.3, 70)
     store.agregar_producto(product1)
 
-    product2 = Producto(2, "Arroz", 2.7, 100)
+    product2 = Producto(2, "Arroz", 2.7, 120)
     store.agregar_producto(product2)
 
-    product3 = Producto(3, "Gaseosa", 4, 75)
+    product3 = Producto(3, "Gaseosa", 4, 85)
     store.agregar_producto(product3)
 
     client1 = Cliente(111, "Mora", 10000)
@@ -155,10 +155,10 @@ def main():
     store.mostrar_productos()
     store.mostrar_clientes()
 
-    store.realizar_venta(client1.ID, 1, 5)
-    store.realizar_venta(client2.ID, 2, 3)
-    store.realizar_venta(client1.ID, 3, 1)
-    store.realizar_venta(client2.ID, 1, 4)
+    store.realizar_venta(client1.ID, 1, 15)
+    store.realizar_venta(client2.ID, 2, 13)
+    store.realizar_venta(client1.ID, 3, 11)
+    store.realizar_venta(client2.ID, 1, 14)
     
     store.mostrar_productos()
     store.mostrar_clientes()

@@ -136,6 +136,8 @@ class Inventario:
         self.cargarProductos()
 
     def categoriaMasVendida(self):
+        self.cargarProductos()
+
         if not self.ventasPorCategoria:
             print("No hay ventas registradas.")
             return

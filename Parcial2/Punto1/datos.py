@@ -1,4 +1,4 @@
-from vehiculos import *
+from .vehiculos import *
 
 vehiculos = {
     "automovil": [

@@ -1,5 +1,5 @@
 import json
-from productos import *
+from .productos import *
 
 direccionArchivo = r"Parcial2\Punto3\files\inventario.json"
 
@@ -80,7 +80,6 @@ class Inventario:
             print(producto)
 
     def buscarProducto(self, id):
-        print("Entro en buscarProducto")
         return self.productos.get(id, None)
     
     def reabastecer(self, id, cantidad):
@@ -135,14 +134,14 @@ class Inventario:
         self.guardarProductos()
         self.cargarProductos()
 
-    def categoriaMasVendida(self):
-        self.cargarProductos()
 
-        if not self.ventasPorCategoria:
-            print("No hay ventas registradas.")
-            return
+def CategoriaMasVendida(inventario):
+    inventario.cargarProductos()
 
-        categoria = max(self.ventasPorCategoria, key=self.ventasPorCategoria.get)
-        cantidad = self.ventasPorCategoria[categoria]
-
-        print(f"Categoría más vendida: {categoria} ({cantidad} unidades)")
+    if not inventario.ventasPorCategoria:
+        print("No hay ventas registradas.")
+        return
+    
+    categoria = max(inventario.ventasPorCategoria, key=inventario.ventasPorCategoria.get)
+    cantidad = inventario.ventasPorCategoria[categoria]
+    print(f"Categoría más vendida: {categoria} ({cantidad} unidades)")

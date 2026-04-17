@@ -1,5 +1,5 @@
 import json
-from pacientes import *
+from .pacientes import *
 
 direccionArchivo = r"Parcial2\Punto2\files\pacientes.json"
 
@@ -99,7 +99,7 @@ class SistemaPacientes:
 
         print("No hay pacientes pendientes.")
 
-    def PacienteMasCritico(self):
+    def pacienteMasCritico(self):
         self.cargarPacientes()
         urgencias = [p for p in self.pacientes.values() if isinstance(p, PacienteUrgencia)]
 

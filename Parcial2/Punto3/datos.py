@@ -1,4 +1,4 @@
-from productos import *
+from .productos import *
 
 productos = {
     "computador": [

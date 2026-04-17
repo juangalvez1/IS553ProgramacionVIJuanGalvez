@@ -1,5 +1,5 @@
-from inventario import *
-from datos import *
+from .inventario import *
+from .datos import *
 
 def MostrarMenu():
     print("\n" + "=" * 54)
@@ -14,8 +14,8 @@ def MostrarMenu():
     print("  0. Salir")
     print("=" * 54)
 
-def Main():
-    inventario = Inventario()
+def Menu3(inventario):
+    # inventario = Inventario()
     
     # Esto es para ingresar por primera vez los productos que estan en el archivo 'datos.py'
 
@@ -29,15 +29,15 @@ def Main():
     
     while True:
         # print("{")
-        # for k, v in inventario.productos.items():
-        #     print(f"{k} : {v}")
+        # for p in inventario.productos.values():
+        #     print(p)
         # print("}")
 
         MostrarMenu()
         opcion = input("  Selecciona una opción: ").strip()
 
         if opcion == "1":
-            codigo = input("Código: ")
+            codigo = int(input("Código: "))
             nombre = input("Nombre: ")
 
             try:
@@ -114,8 +114,9 @@ def Main():
             codigo = int(input("Código: "))
             inventario.consultarProducto(codigo)
 
-        elif opcion == "6":
-            inventario.categoriaMasVendida()
+        # Probando funcion del punto 4
+        # elif opcion == "6":
+        #     CategoriaMasVendida(inventario)
 
         elif opcion == "0":
             print("\n  ¡Hasta luego!\n")
@@ -125,4 +126,4 @@ def Main():
             print("Opción no válida")
 
 
-Main()
+# Menu3()

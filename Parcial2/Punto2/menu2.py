@@ -1,5 +1,5 @@
-from sistema import *
-from datos import *
+from .sistema import *
+from .datos import *
 
 def MostrarMenu():
     print("\n" + "=" * 54)
@@ -15,8 +15,8 @@ def MostrarMenu():
     print("  0. Salir")
     print("=" * 54)
 
-def main():
-    sistema = Sistema()
+def Menu2():
+    sistema = SistemaPacientes()
 
     #  Esto es para ingresar por primera vez los productos que estan en el archivo 'datos.py'
     # listaPacientes = []
@@ -74,5 +74,4 @@ def main():
         else:
             print("Opción inválida. Intente de nuevo.")
 
-if __name__ == "__main__":
-    main()
+# Menu2()

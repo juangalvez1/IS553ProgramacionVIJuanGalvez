@@ -1,4 +1,4 @@
-from pacientes import *
+from .pacientes import *
 
 pacientes = {
     "general": [
